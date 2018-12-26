@@ -1,0 +1,355 @@
+header{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 33px 0;
+	text-align: center;
+	float: left;
+}
+header .container{
+	max-width: 1400px;
+}
+.fixed-header{
+	background-color: #fff;
+	position: fixed;
+	top: -80px;
+	z-index: 1;
+	transition: transform 1s ease 0s;
+	-webkit-transform: translateY(80px);
+	-webkit-transition: transform 1s ease 0s;
+	-ms-transform: translateY(80px);
+	-ms-transition: transform 1s ease 0s;
+	-o-transform: translateY(80px);
+	-o-transition: transform 1s ease 0s;
+	box-shadow:0px 0 2px rgba(0,0,0,0.14);
+	-webkit-box-shadow:0px 0 2px rgba(0,0,0,0.14);
+}
+header.fixed-header{
+	padding: 5px 0;
+}
+.fixed-header .social-bar{
+	margin-top: 6px;
+}
+.fixed-header .logo {
+    max-width: 90px;
+}
+.logo{
+	float: left;
+}
+.fixed-header .menu{
+	margin-top: 11px;
+}
+.logo img{
+	display: block;
+}
+
+.menu {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-width: 67%;
+    margin-top: 18px;
+}
+.menu ul{
+	display: inline-block;
+}
+.menu li{
+	float: left;
+	list-style-type: none;
+	margin-right: 50px;
+}
+.menu li:last-child{
+	margin-right: 0;
+}
+.menu li a{
+	font-size: 16px;
+	color: #728fa1;
+	font-family: 'poppinsregular';
+	font-weight: normal;
+}
+.menu li a:hover, .menu li.active a{
+	color: #018edd;
+}
+.social-bar{
+	float: right;
+	margin-top: 8px;
+}
+.social-bar li{
+	float: left;
+	list-style-type: none;
+	margin-right: 10px;
+}
+.social-bar li a:hover{
+	opacity: 0.8;
+}
+.social-bar li:last-child{
+	margin-right: 0;
+}
+.social-icon{
+	background-image: url(../images/social-icon.png);
+	background-repeat: no-repeat;
+	display: block;
+    width: 43px;
+	height: 43px;
+}
+.fixed-header .social-icon, .our-teams .social-bar li a{
+    background-size: 167px;
+    width: 30px;
+    height: 30px;
+}
+.fixed-header .twitter {
+    background-position: -34px 0;
+}
+.fixed-header .git {
+    background-position: -68px 0;
+}
+
+.twitter {
+    background-position: -52px 0;
+}
+.git {
+    background-position: -104px 0;
+}
+.linkdin {
+    background-position: -157px 0;
+}
+.medim {
+    background-position: -209px 0;
+}
+
+footer{
+	background-color: #f4f8fd;
+	padding: 50px 0;
+	text-align: center;
+}
+footer .social-bar{
+	float: none;
+	margin: 0 auto;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+footer p{
+	color: #728fa1;
+	font-family: 'poppinsregular';
+	font-weight: normal;
+	margin: 0;
+	font-size: 14px;
+	line-height: normal;
+}
+
+
+/* responsive css start here*/
+
+@media only screen and (max-width: 1374px) {
+	header .container{
+	max-width: 1200px;
+}
+footer{
+	padding: 30px 0;
+}
+.menu li {
+    margin-right: 30px;
+}
+.menu li a{
+	font-size: 18px;
+}
+}
+@media only screen and (max-width: 1224px) {
+header .container {
+    max-width: 1130px;
+}
+}
+
+@media only screen and (max-width: 1174px) {
+	header .container{
+		max-width: 940px;
+	}
+	header{
+		padding: 15px 0;
+	}
+	.menu li{
+		margin-right: 30px;
+	}
+	.logo{
+		max-width: 100px;
+	}
+	.menu{
+		margin-top: 13px;
+	}
+	.menu li{
+		margin-right: 15px;
+	}
+	.menu li a{
+		font-size: 17px;
+	}
+	.social-icon{
+		background-size: 180px;
+		height: 32px;
+		width: 32px;
+	}
+	.twitter {
+    background-position: -36px 0;
+    }
+    .git {
+    background-position: -74px 0;
+    }
+    .linkdin {
+    background-position: -111px 0;
+	}
+	.medim {
+	    background-position: -148px 0;
+	}
+    .social-bar {
+    margin-top: 6px;
+	}
+	footer .social-bar{
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 969px) {
+	header .container{
+		max-width: 730px;
+	}
+	.menu{
+		max-width: 60%;
+		float: right;
+		position: inherit;
+		margin-top: 10px;
+	}
+	.menu li {
+    margin-right: 20px;
+}
+	header .social-bar {
+    display: none;
+    }
+    footer {
+    padding: 20px 0;
+}
+
+}
+@media only screen and (max-width: 767px) {
+	header .container{
+		max-width: 90%;
+	}
+
+    header {
+    padding: 10px 0;
+    }
+    .menu{
+    	margin: 8px 0 0 0;
+    	left: inherit;
+    	right: 0;
+    }
+    .logo {
+    max-width: 80px;
+    }
+}
+
+
+/* mobile and dropdown css*/
+
+.overlay-main{background:rgba(0,0,0,.35);float:left;height:98%;left:0;position:absolute;top:0;width:100%;min-height:80px}
+.wrapper{max-width:100%;margin:0 auto;position:relative}
+.fixed{position:fixed;top:0;width:100%;z-index:99}
+.menuicon {
+    width: auto;
+    float: right;
+    overflow: hidden;
+    display: none;
+    margin: 0px 0 0 0px;
+}
+.menu_icon {
+    width: 26px;
+    float: left;
+    height: 17px;
+    background-image: url(../images/menu_icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.main_menu{width:30px;float:left;text-align:center;height:40px;}
+.menuicon .sport_page .school_name a{padding:0 0 0 3px;}
+.according-main{position:absolute;right:0;width:100%;z-index:99;text-align:left;background:#323232;display:none;max-height:330px;overflow-x:hidden;overflow-y:auto}
+.accordion{font-size:12px;margin:0;padding:0;color:#fff;width:100%;float:left;background:#fff!important;display:none}
+.dropdown-menu-item{max-height:200px;overflow-x:hidden;overflow-y:auto;width:100%;float:left}
+.dropdown-menu-item>li{background:#fff;border-bottom:1px #d2d2d2 solid!important;margin:0 2.5%!important;width:95%!important;padding:9px 0!important;z-index:99}
+.dropdown-menu-item>li a{display:block;width:100%;float:left}
+@keyframes flipdown{0%{opacity:0;transform-origin:top center;transform:rotateX(-90deg)}
+5%{opacity:1}
+80%{transform:rotateX(8deg)}
+83%{transform:rotateX(6deg)}
+92%{transform:rotateX(-3deg)}
+100%{transform-origin:top center;transform:rotateX(0deg)}
+}
+.mobile_menu{background:none!important}
+.header_down_menu{width:100%;float:left;background:#fff;position:relative;box-shadow:0 4px 2px -2px rgba(0,0,0,.3);-webkit-box-shadow:0 4px 2px -2px rgba(0,0,0,.3);-o-box-shadow:0 4px 2px -2px rgba(0,0,0,.3);-moz-box-shadow:0 4px 2px -2px rgba(0,0,0,.3);max-height:40px;}
+.dropdown-menu{position:absolute;top:100%;width:83%;background:#fff;float:left;display:none;z-index:10;max-height:390px;max-width:300px;overflow:hidden;overflow-y:auto;-webkit-box-shadow:0 0 10px rgba(0,0,0,.5);-ms-box-shadow:0 0 10px rgba(0,0,0,.5);-moz-box-shadow:0 0 10px rgba(0,0,0,.5);-o-box-shadow:0 0 10px rgba(0,0,0,.5);box-shadow:0 0 10px rgba(0,0,0,.5)}
+.dropdown-menu li{float:left;width:100%;margin:0;border-bottom:1px #ddd solid;padding:0;line-height:24px;font-family:"Open sans";text-transform:capitalize}
+.dropdown-menu li a{font-size:16px;color:#484848;display:block;text-transform:capitalize;padding:10px;}
+@media screen and (max-width:479px){.dropdown-menu{max-height:525px}
+.drop-down-menu-item ul{max-height:530px}
+}
+@media screen and (max-width:360px){.dropdown-menu{max-height:350px}
+.drop-down-menu-item ul{max-height:350px}
+}
+.pushy-right{height:100%;width:0;position:fixed;z-index:1;top:0;right:0;background-color:#fff;overflow-x:hidden;transition:0.5s;padding-top:58px;z-index:9999999;}
+.sidemenu .closebtn{position:absolute;top:10px;right:0px;font-size:36px;margin-left:50px;height:36px;line-height:30px;padding:0px 10px;display:none;color:#666;}
+.sidemenu .closebtn:hover{background-color:transparent;}
+.overlay{position:fixed;left:0;right:0px;top:0px;height:100%;width:100%;float:left;overflow:hidden;background:rgba(0, 0, 0, 0.5);display:none;z-index:99;}
+@media screen and (max-height:450px){.menu_scrollbar{height:320px;}
+}
+.accordion-menu li{-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.accordion-menu li.open .dropdownlink{color:#484848;background-color:#fff;}
+.accordion-menu li .dropdownlink .fa-chevron-down{-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.accordion-menu li.open .dropdownlink .fa-chevron-down{-webkit-transform:rotate(90deg);transform:rotate(90deg);-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.accordion-menu li:last-child .dropdownlink{border-bottom:0;}
+.dropdownlink{cursor:pointer;display:block;padding:0;font-size:16px;color:#fff;position:relative;-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.dropdownlink i{float:right;}
+.submenuItems{display:none;background:#fff;position:absolute;width:320px; top: 99px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+-webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+-o-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+-ms-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+z-index: 2;
+}
+.submenuItems a{display:block;color:#666 !important;padding:10px 15px;font-size:16px; text-transform: capitalize!important; line-height: 24px !important; -webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.submenuItems a:hover{color:#ea5607 !important;background-color:#fff;}
+.sports_gender{font-size:14px;color:#fff;font-weight:normal;line-height:46px;display:inline-block;padding-left:5px;height:46px;overflow:hidden;text-align:left;}
+.inner-submenu{display:block;padding:10px 15px;cursor:pointer;font-size:14px;}
+.inner-submenu:hover{color:#ea5607;}
+.inner-submenu .fa-chevron-down{float:right;-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.inner-submenu.submenu-open .fa-chevron-down{-webkit-transform:rotate(90deg);transform:rotate(90deg);-webkit-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.inner-submenu-content{background-color:#fff;}
+.header-nav .submenuItems li{border-bottom:0px;width:100%;text-align:left; padding: 0;}
+.mobile-nav, .blenk-menu{display:none;}
+
+@media screen and (max-width:1370px){
+.submenuItems{
+    top: 89px;
+}
+.fixed-top .submenuItems{
+    top: 86px;
+}
+}
+@media screen and (max-width:969px)
+{
+body{width:100%;}
+.mobile-nav, .sidemenu .closebtn, .menuicon, .blenk-menu{display:block;}
+.accordion-menu li{float:none;animation:inherit !important;opacity:1 !important;margin: 0 !important; display:block;height:auto;line-height:40px;}
+.sidemenu{position:fixed;background-color:#fff;overflow:auto;width:280px;padding-top:0px;right:-280px;top:0;transition:0.5s;z-index:9999999;height:100%;}
+.submenuItems{width:100%; z-index: 9; top:39px;}
+.accordion-menu{text-align:left;padding: 0 0 0 8%; padding-top: 35px; width: 92%;}
+.navication li.contact_btn{margin-top:10px;}
+ .menuicon{
+    margin: 1px 0px 0 0px;
+ }
+}
+
+@media screen and (max-width:767px){
+ .menuicon{
+    margin: 1px 0px 0 0px;
+ }
+}
+
