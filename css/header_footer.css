@@ -152,8 +152,8 @@ footer{
 .menu li {
     margin-right: 30px;
 }
-.menu li a{
-	font-size: 18px;
+.menu li a {
+    font-size: 14px;
 }
 }
 @media only screen and (max-width: 1224px) {

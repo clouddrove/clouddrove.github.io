@@ -223,12 +223,12 @@ table {
 }
 .banner-left h1{
 	margin: 0 0 30px 0;
-	font-size: 70px;
+	font-size: 67px;
 	line-height: 90px;
 }
 .banner-right{
 	float: right;
-	width: 45%;
+	width: 37%;
 }
 .what-we{
 	padding: 60px 0;
@@ -348,7 +348,6 @@ table {
 	padding: 30px;
 }
 .our-testimonial li p{
-	font-size: 18px;
 	color: #7d96a6;
 }
 .user-image{
@@ -362,11 +361,11 @@ table {
 }
 .user-name{
 	float: left;
-	font-size: 22px;
+	font-size: 16px;
 	color: #7d96a6;
 	font-family: 'poppinssemibold';
 	font-weight: normal;
-	margin: 18px 0 0 20px;
+	margin: 24px 0 0 20px;
 }
 .our-teams{
 	border-top: 1px solid rgba(106, 136, 154, 0.2);
@@ -378,6 +377,7 @@ table {
 	display: inline-block;
 	margin-right: 0px;
 	vertical-align: middle;
+	width: 25%;
 }
 .our-teams li img{
 	vertical-align: middle;
@@ -386,11 +386,12 @@ table {
 	margin-right: 0;
 }
 .our-teams h4{
-	margin: 20px 0 10px 0;
+	margin: 20px 0 5px 0;
+	font-size: 16px;
 
 }
 .our-teams span{
-	font-size: 20px;
+	font-size: 16px;
 }
 .our-teams .social-bar{
 		width: 100%;
@@ -609,11 +610,11 @@ textarea.form-control{
     text-align: center;
     background-image: url(../images/dev-bg.png);
     background-repeat: no-repeat;
-    font-size: 26px;
+    font-size: 20px;
     color: #ffffff;
     font-family: 'poppinsregular';
 	font-weight: normal;
-	padding: 40px 0;
+	padding: 20px 0;
 	margin-top: 30px;
 	background-position: center center;
 	background-size: cover;
@@ -631,19 +632,24 @@ h1, .heading, h2, .banner-center .banner-left h1{
 	font-size: 26px;
 }
 h4{
-	font-size: 20px;
+	font-size: 18px;
 }
 .heading {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+.our-teams li img {
+    vertical-align: middle;
+    max-width: 100px;
 }
 .banner-left h1 {
     margin: 0 0 30px 0;
 }
 .top-banner{
 	padding-bottom: 20px;
+	padding-top: 125px;
 }
 .what-we {
-    padding: 50px 0;
+    padding: 70px 0;
 }
 .our-process{
 	padding: 50px 0 0 0;
@@ -654,9 +660,6 @@ h4{
 .what-we .col-4 h4 {
     margin: 10px 0;
 }
-.our-testimonial li p{
-	font-size: 18px;
-}
 .padcom {
     padding: 30px 0;
 }
@@ -666,20 +669,26 @@ h4{
 .our-process .heading {
     margin-bottom: 0;
 }
-.banner-right {
-    width: 45%;
+.banner-right,.banner-left {
+    width: 50%;
     text-align: center;
+}
+.banner-right{
+	width: 43%;
+}
+.banner-left{
+	margin-top: 70px;
 }
 .banner-left h1 {
     font-size: 42px;
     line-height: 60px;
 }
 .banner-right img {
-    max-width: 70%;
+    max-width: 50%;
 }
-.devops{
-	padding: 30px 0;
-	font-size: 26px;
+.devops {
+    padding: 20px 0;
+    font-size: 16px;
 }
 .what-we .col-4 img {
     max-width: 80px;
@@ -703,9 +712,6 @@ h5{
 }
 .our-teams li{
 	margin-right: 0px;
-}
-.our-teams span {
-    font-size: 16px;
 }
 .how-we-do .col-4.buzz-away {
     padding: 75px 0;
