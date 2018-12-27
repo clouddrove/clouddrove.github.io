@@ -243,6 +243,10 @@ table {
 	margin-right: 3.5%;
 	margin-bottom: 20px;
 }
+.what-we .col-4 ul {
+    margin-left: 70px;
+    text-align: left;
+}
 .what-we .col-4 img {
     max-width: 90px;
     max-height: 70px;
@@ -716,6 +720,9 @@ h5{
 .how-we-do .col-4.buzz-away {
     padding: 75px 0;
 }
+.what-we .col-4 ul {
+    margin-left: 70px;
+}
 }
 @media only screen and (max-width: 1224px) {
 .container {
@@ -733,6 +740,9 @@ h5{
 		line-height: 28px;
 		margin-bottom: 20px;
 	}
+	.what-we .col-4 ul {
+    margin-left: 20px;
+}
 	.btn{
 		line-height: 47px;
 		height: 44px;
@@ -870,6 +880,9 @@ h4 {
     height: 40px;
     font-size: 16px;
     }
+    .what-we .col-4 ul {
+    margin-left: 0;
+}
 	.banner-left h1 {
     font-size: 26px;
     }
@@ -1086,5 +1099,8 @@ h4 {
 }
 .form-row {
     margin-bottom: 10px;
+}
+.what-we .col-4 ul {
+    margin-left: 15px;
 }
 }
