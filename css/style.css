@@ -628,6 +628,18 @@ textarea.form-control{
 .mobile{
 		display: none;
 	}
+.our-projects{
+		border-top:1px solid rgba(106, 136, 154, 0.2);
+	}
+.our-projects li{
+		list-style-type: none;
+		display: inline-block;
+		margin-right: 30px;
+
+	}
+.our-projects li:last-child{
+	margin-right: 0;
+}	
 	
 /* responsive css start here*/
 
@@ -723,6 +735,9 @@ h5{
 .what-we .col-4 ul {
     margin-left: 70px;
 }
+.our-projects li img {
+    max-height: 70px;
+}
 }
 @media only screen and (max-width: 1224px) {
 .container {
@@ -749,6 +764,9 @@ h5{
 	}
 	.banner-right {
     width: 50%;
+}
+.our-projects li img {
+    max-height: 60px;
 }
 .banner-left {
     width: 44%;
@@ -880,6 +898,9 @@ h4 {
     height: 40px;
     font-size: 16px;
     }
+    .our-projects li img {
+    max-height: 50px;
+}
     .what-we .col-4 ul {
     margin-left: 0;
 }

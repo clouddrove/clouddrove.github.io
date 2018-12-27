@@ -26,6 +26,7 @@
 				<li class="mobile-hide"><a href="#What_We_Do" onclick="closemenu();">What We Do</a></li>
 				<li class="mobile-hide"><a href="#Technology" onclick="closemenu();">Technology</a></li>
 				<li class="mobile-hide"><a href="#How_We_Do_It" onclick="closemenu();">How We Do It </a></li>
+				<li class="mobile-hide"><a href="#Projects" onclick="closemenu();">Projects </a></li>
 				<!--<li class="mobile-hide"><a href="#Testimonial" onclick="closemenu();">Testimonial </a></li>-->
 				<li><a href="https://medium.com/@anmolnagpal" target="_blenk">Blog</a></li>
 				<li><a href="contact-us.html">Contact Us</a></li>
@@ -242,15 +243,7 @@ your cloud.</h1>
 		<img src="images/proper.png" alt="Proper Documentation">
 			<h4>Proper Documentation</h4>
 		</div>
-       <!--
-		<div class="col-4 buzz-away marR0">
-			<h4>…. And we are just a</h4>
-			<h4 class="desltop"><a href="contact-us.html">buzz away!</a></h4>
-			<h4 class="mobile"><a href="tel:+14252470799">buzz away!</a></h4>
-		</div>
-
-		-->
-
+    
 
 
 	</div>
@@ -268,57 +261,28 @@ your cloud.</h1>
 
 
 
-<!-- Our Testimonial section start here -->
-<!--
-<section id="Testimonial" class="col-12 what-we our-testimonial">
+<!-- Our  projects section start here -->
+
+<section id="Projects" class="col-12 what-we our-projects">
 <div class="container">
-	<h3 class="heading">Our Testimonial</h3>
+	<h2 class="heading">Completed Projects </h2>
 
 	<div class="col-12">
-	<ul class="bxslider">
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
-		<li>
-			<p>"Thank you for the experience and knowledge that you've taught us about cryptocurrencies, markets, and modern technologies. You guys rock!”</p>
-			<span class="user-image"><img src="images/user.jpg" alt="user"></span>
-			<span class="user-name">Jason Ramirez</span>
-		</li>
+	<ul>
+		<li><a href="#"><img src="images/herosports.png" alt="Hero Sports"></a></li>
+		<li><a href="#"><img src="images/equls.png" alt="Equls"></a></li>
+		<li><a href="#"><img src="images/thriftify.png" alt="Thriftify"></a></li>
+		<li><a href="#"><img src="images/8710.png" alt=" 8710photography"></a></li>
 	</ul>
-		
-		
 		
 	</div>
 </div>
 	
 </section>
--->
-<!-- Our Testimonial section and here -->
+
+<!-- Our Partners section and here -->
 
 <!-- Our Teams section start here -->
-
 <section class="col-12 what-we our-teams">
 <div class="container">
 	<h2 class="heading">Our Teams</h2>
@@ -364,8 +328,10 @@ your cloud.</h1>
 </div>
 	
 </section>
-
 <!--Our Teams section and here -->
+
+
+
 
 <footer class="col-12">
 	<div class="container">
@@ -394,7 +360,23 @@ your cloud.</h1>
             else sticky.removeClass('fixed-header');
         });
     </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+	
+});
+</script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script>
  $(document).ready(function(){
@@ -486,25 +468,5 @@ your cloud.</h1>
       
   }
 </script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-	
-});
-</script>
-
-
 </body>
 </html>
