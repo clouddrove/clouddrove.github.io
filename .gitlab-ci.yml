@@ -8,12 +8,4 @@ docker build:
   script:
     - docker info
     - docker build -t registry.gitlab.com/clouddrove/www .
-
-docker push:
-  stage: Push to Docker Hub
-  only:
-    - master
-  script:
     - docker push registry.gitlab.com/clouddrove/www
-
-
