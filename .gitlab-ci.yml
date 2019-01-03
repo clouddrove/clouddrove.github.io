@@ -1,13 +1,12 @@
 
 stages:
   - Build image
-
-before_script:
-  - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
-
+  -
 docker build:
   stage: Build image
+  image: docker:stable
   script:
+    - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
     - docker info
     - docker build -t registry.gitlab.com/clouddrove/www .
     - docker push registry.gitlab.com/clouddrove/www
