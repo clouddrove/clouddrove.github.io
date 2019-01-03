@@ -1,10 +1,17 @@
+image: docker:stable
 
-stages:
-  - Build image
+services:
+  - docker:dind
 
-docker build:
-  stage: Build image
-  image: docker:stable
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+
+build:
+  stage: build
   script:
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
     - docker info
