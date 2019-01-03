@@ -3,6 +3,9 @@ image: docker:stable
 stages:
   - Build image
 
+before_script:
+  - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
+
 docker build:
   stage: Build image
   script:
