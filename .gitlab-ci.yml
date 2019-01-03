@@ -7,7 +7,6 @@ before_script:
 
 docker build:
   stage: Build image
-  image: docker:stable
   script:
     - docker info
     - docker build -t registry.gitlab.com/clouddrove/www .
