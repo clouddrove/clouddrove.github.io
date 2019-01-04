@@ -4,9 +4,6 @@ services:
   - docker:dind
 
 variables:
-  NAME          : registry.gitlab.com/clouddrove/www
-  TAG           : $NAME:$version
-  LATEST        : $NAME:latest
   DOCKER_HOST   : tcp://docker:2375
   DOCKER_DRIVER : overlay2
 
@@ -16,8 +13,10 @@ before_script:
 build:
   stage: build
   script:
-    - version=$(cat version)
-    - echo $version
+    - VERSION=$(cat version)
+    - NAME=$(registry.gitlab.com/clouddrove/www)
+    - TAG=$($NAME:$VERSION)
+    - LATEST=$($NAME:latest)
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
     - docker build -t $TAG .
     - docker tag $TAG $LATEST
