@@ -17,6 +17,10 @@ build:
     - NAME=$(registry.gitlab.com/clouddrove/www)
     - TAG=$($NAME:$VERSION)
     - LATEST=$($NAME:latest)
+    - echo $VERSION
+    - echo $LATEST
+    - echo $TAG
+    - echo $NAME
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
     - docker build -t $TAG .
     - docker tag $TAG $LATEST
