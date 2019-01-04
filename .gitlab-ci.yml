@@ -17,4 +17,6 @@ build:
     - echo $version
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
     - docker build -t registry.gitlab.com/clouddrove/www:$version .
+    - docker tag registry.gitlab.com/clouddrove/www:$version registry.gitlab.com/clouddrove/www:latest
+    - docker push registry.gitlab.com/clouddrove/www:latest
     - docker push registry.gitlab.com/clouddrove/www:$version
