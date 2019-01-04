@@ -5,8 +5,8 @@ services:
 
 variables:
   NAME          : registry.gitlab.com/clouddrove/www
-  TAG           : ${NAME}:$version
-  LATEST        : ${NAME}:latest
+  TAG           : $NAME:$version
+  LATEST        : $NAME:latest
   DOCKER_HOST   : tcp://docker:2375
   DOCKER_DRIVER : overlay2
 
@@ -19,7 +19,7 @@ build:
     - version=$(cat version)
     - echo $version
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
-    - docker build -t ${TAG} .
-    - docker tag ${TAG} ${LATEST}
-    - docker push ${TAG}
-    - docker push ${LATEST}
+    - docker build -t $TAG .
+    - docker tag $TAG $LATEST
+    - docker push $TAG
+    - docker push $LATEST
