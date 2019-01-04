@@ -19,3 +19,5 @@ build:
     - docker tag registry.gitlab.com/clouddrove/www:$version registry.gitlab.com/clouddrove/www:latest
     - docker push registry.gitlab.com/clouddrove/www:latest
     - docker push registry.gitlab.com/clouddrove/www:$version
+  only:
+    - master
