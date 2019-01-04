@@ -13,16 +13,9 @@ before_script:
 build:
   stage: build
   script:
-    - VERSION=$(cat version)
-    - NAME=$(registry.gitlab.com/clouddrove/www)
-    - TAG=$($NAME:$VERSION)
-    - LATEST=$($NAME:latest)
-    - echo $VERSION
-    - echo $LATEST
-    - echo $TAG
-    - echo $NAME
+    - version=$(cat version)
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
-    - docker build -t $TAG .
-    - docker tag $TAG $LATEST
-    - docker push $TAG
-    - docker push $LATEST
+    - docker build -t registry.gitlab.com/clouddrove/www:$version .
+    - docker tag registry.gitlab.com/clouddrove/www:$version registry.gitlab.com/clouddrove/www:latest
+    - docker push registry.gitlab.com/clouddrove/www:latest
+    - docker push registry.gitlab.com/clouddrove/www:$version
