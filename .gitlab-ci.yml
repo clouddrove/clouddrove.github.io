@@ -4,8 +4,11 @@ services:
   - docker:dind
 
 variables:
-  DOCKER_HOST: tcp://docker:2375
-  DOCKER_DRIVER: overlay2
+  NAME          : registry.gitlab.com/clouddrove/www
+  TAG           : ${NAME}:$version
+  LATEST        : ${NAME}:latest
+  DOCKER_HOST   : tcp://docker:2375
+  DOCKER_DRIVER : overlay2
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
@@ -16,7 +19,7 @@ build:
     - version=$(cat version)
     - echo $version
     - docker login -u gitlab-ci-token -p $GITLAB_TOKEN registry.gitlab.com
-    - docker build -t registry.gitlab.com/clouddrove/www:$version .
-    - docker tag registry.gitlab.com/clouddrove/www:$version registry.gitlab.com/clouddrove/www:latest
-    - docker push registry.gitlab.com/clouddrove/www:latest
-    - docker push registry.gitlab.com/clouddrove/www:$version
+    - docker build -t ${TAG} .
+    - docker tag ${TAG} ${LATEST}
+    - docker push ${TAG}
+    - docker push ${LATEST}
