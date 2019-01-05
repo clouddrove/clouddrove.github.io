@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website
+  namespace: clouddrove
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: website
+  template:
+    metadata:
+      labels:
+        app: website
+        team: developer
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: pool-1 #this can be changes as per requirement
+      containers:
+        - name: website
+          image: registry.gitlab.com/clouddrove/www:latest
+          ports:
+            - name: website
+              containerPort: 80
+          resources:
+            limits:
+              memory: "1Gi"
+            requests:
+              memory: "256Mi"

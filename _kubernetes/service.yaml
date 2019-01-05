@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website
+  namespace: clouddrove
+  labels:
+    app: website
+    team: developer
+spec:
+  #type: ClusterIP
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http
+  selector:
+    app: website
