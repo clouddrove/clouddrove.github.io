@@ -504,7 +504,7 @@ table {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	margin-bottom: 92px;
-	padding-bottom: 8px;
+	padding-bottom: 0px;
 	letter-spacing: 0.5px;
 }
 .contact-bar li:last-child{
